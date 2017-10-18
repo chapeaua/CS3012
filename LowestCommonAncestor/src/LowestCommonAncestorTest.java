@@ -1,11 +1,5 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.Ignore;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-
-import java.util.Arrays;
-import org.junit.Test;
 
 public class LowestCommonAncestorTest {
 
@@ -60,9 +54,7 @@ public class LowestCommonAncestorTest {
 		   assertEquals("LCA test when result is on the right of the root",expectedResult1,LowestCommonAncestor.LCA(root,root.right.left,root.right.right));
 		   assertEquals("LCA test when result is not a direct child of the root",expectedResult2,LowestCommonAncestor.LCA(root,root.left.right.left,root.left.right.right));
 	}
-	@Test
-	public void TestNode(){
 	
-	}
-	
+
+
 }
