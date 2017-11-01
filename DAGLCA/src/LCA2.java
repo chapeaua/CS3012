@@ -45,5 +45,23 @@ public class LCA2 {
 			parent.children.add(Node);
 		}
 		
-
+		public Node SearchLCA(Node n1,Node n2,Node n3){
+			Node result=null;
+			if(n2.ident==root.ident){return root;}
+			if(n3.ident==root.ident){return root;}
+			else{
+				Node node2=SearchNode(n2.ident,n1);
+				Node node3=SearchNode(n3.ident,n1);
+				if(node2 !=null && node3!=null){result=n1;
+					for(int i=0;i<n1.children.size();i++){
+						if(SearchLCA(n1.children.get(i),n2,n3)!=null){
+							result=SearchLCA(n1.children.get(i),n2,n3);
+						}
+					}
+				}
+				
+			}
+			return result;
+		}
+		
 }
